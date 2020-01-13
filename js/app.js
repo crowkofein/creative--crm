@@ -34,7 +34,10 @@ $(document).ready(function () {
     })
 
 
-
+$('.ba-dropdown-btn').on('click', function(){
+    $(this).toggleClass('ba-dropdown-btn_open')
+    $(this).next('.ba-dropdown').toggle();
+})
 
 
 

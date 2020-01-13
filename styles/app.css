@@ -278,6 +278,43 @@ button {
   background-color: #f14e95;
   color: #fff;
   border-radius: 50%;
-  font-size: .75rem;
-  right: -.5rem;
+  font-size: 0.75rem;
+  right: -0.5rem;
   top: -0.25rem; }
+
+.ba-dropdown {
+  display: none;
+  background-color: #f7f7f7;
+  position: absolute;
+  border: 1px solid #303841;
+  top: 100%;
+  right: 1rem; }
+  .ba-dropdown:before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    right: 0.5rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: transparent transparent #f7f7f7 transparent; }
+  .ba-dropdown-content {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .ba-dropdown__item {
+    border-bottom: 1px solid #442a9d; }
+    .ba-dropdown__item:last-child {
+      border: none; }
+  .ba-dropdown__element {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    color: #303841; }
+    .ba-dropdown__element:hover, .ba-dropdown__element:focus {
+      background-color: yellow; }
+  .ba-dropdown-btn {
+    transition: .3s; }
+    .ba-dropdown-btn_open {
+      transform: rotate(180deg); }

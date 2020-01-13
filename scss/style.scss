@@ -132,15 +132,66 @@ button {
   }
 }
 
+.ba-badge {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: #f14e95;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  right: -0.5rem;
+  top: -0.25rem;
+}
 
-.ba-badge{
-	position: absolute;
-	width: 1rem;
-	height: 1rem;
-	background-color: #f14e95;
-	color: #fff;
-	border-radius: 50%;
-	font-size: .75rem;
-	right: -.5rem;
-	top: -0.25rem;
+.ba-dropdown {
+  display: none;
+  background-color: #f7f7f7;
+  position: absolute;
+  border: 1px solid $primaryColor;
+  top: 100%;
+  right: 1rem;
+ 
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    right: 0.5rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: transparent transparent #f7f7f7 transparent;
+  }
+
+  &-content {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    border-bottom: 1px solid $secondaryColor;
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__element {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    color: $primaryColor;
+    &:hover,
+    &:focus {
+      background-color: opacify(yellow, 0.5);
+    }
+  }
+  &-btn{
+    transition: .3s;
+    &_open{
+      transform: rotate(180deg);
+    }
+  }
 }
